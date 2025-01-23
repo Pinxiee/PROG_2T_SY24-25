@@ -25,6 +25,9 @@ int main() {
         cout << "Enter your annual income (in php): ";
         cin >> annual_income;
 
+        cout << "Enter your credit score: ";
+        cin >> credit_score;
+
         cout << "Enter your loan amount (in php): ";
         cin >> loan_amount;
 
@@ -43,7 +46,7 @@ int main() {
             is_eligible = false;
             rejection += "- Applicant does not meet th required income for the loan amount.\n";
         }
-
+        
         if (credit_score < 700){
             is_eligible = false;
             rejection += "- Applicant must have the credit score of 700 or higher.\n";
