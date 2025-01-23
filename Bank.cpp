@@ -36,11 +36,6 @@ int main() {
 
         if (age < 21 || age > 60){
             is_eligible = false;
-            rejection += "- Age must be between 21 and 60.\n";
-        }
-
-        if (age < 21 || age > 60){
-            is_eligible = false;
             rejection += "- Applicant must have age between 21 and 60.\n";
         }
 
@@ -74,7 +69,7 @@ int main() {
             double monthly_interest = annual_interest/12;
             int total_months = loan_term * 12;
 
-            double monthly_amortization = (loan_amount * monthly_interest) / (1 - pow (1 + monthly_interest, -loan_term));
+            double monthly_amortization = (loan_amount * monthly_interest) / (1 - pow (1 + monthly_interest, -total_months));
             
             cout << fixed << setprecision(2);
             cout << "Loan Application Result for " << name << ":" << endl;
