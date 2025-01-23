@@ -34,6 +34,10 @@ int main() {
         cout << "Enter loan term (in years): ";
         cin >> loan_term;
 
+        cout << "Do you have an existing loan with the bank? (Y/N): ";
+        cin >> has_existing_loan;
+        cin.ignore();
+
         bool is_eligible = true;
         string rejection;
 
@@ -44,7 +48,7 @@ int main() {
 
         if ((loan_amount < 50000 && annual_income < 30000) || (loan_amount >= 50000 && loan_amount <= 100000 && annual_income < 50000) || (loan_amount > 100000 && annual_income < 80000)){
             is_eligible = false;
-            rejection += "- Applicant does not meet th required income for the loan amount.\n";
+            rejection += "- Applicant does not meet the required income for the loan amount.\n";
         }
         
         if (credit_score < 700){
