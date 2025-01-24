@@ -1,0 +1,37 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main (){
+    int n1;
+    int n2;
+    int n3;
+    int n4;
+    int n5;
+
+    cout << "Enter integer 1: ";
+    cin >> n1;
+
+    cout << "Enter integer 2: ";
+    cin >> n2;
+
+    cout << "Enter integer 3: ";
+    cin >> n3;
+
+    cout << "Enter integer 4: ";
+    cin >> n4;
+
+    cout << "Enter integer 5: ";
+    cin >> n5;
+
+
+    if ((n1 > n2) && (n1 > n3) && (n1 > n4) && (n1 > n5)){
+        cout << "Leftmost";
+    } else if ((n3 > n1) && (n3 > n2) && (n3 > n4) && (n3 > n5)){
+        cout << "Middle";
+    } else if ((n5 > n1) && (n5 > n2) && (n5 > n3) && (n5 > n4)){
+        cout << "Rightmost";
+    } else {
+        cout << "Unknown";
+    }
+}
